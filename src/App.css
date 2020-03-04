@@ -1,5 +1,15 @@
-.App {
-  text-align: center;
+body {
+  background: #f7fafc;
+}
+
+.list-hover {
+  border-left: solid 1px white;
+  transition: .1s;
+}
+
+.list-hover:hover {
+  border-left: solid 10px #4C51BF;
+  transition: .1s;
 }
 
 .App-logo {
