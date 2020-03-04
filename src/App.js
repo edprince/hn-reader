@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="App bg-gray-100 pb-10 px-2">
       <h2 className="text-indigo-600 text-center text-3xl leading-9 font-extrabold pt-4 mb-8">tech news</h2>
-      { topStories.map(story =>  <Story story={story} /> )}
+      { topStories.map((story, index) =>  <Story key={index} story={story} /> )}
     </div>
   );
 }

@@ -3,7 +3,7 @@ body {
 }
 
 .list-hover {
-  border-left: solid 1px white;
+  border-right: solid 1px white;
   transition: .1s;
 }
 
