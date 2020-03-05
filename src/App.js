@@ -7,15 +7,17 @@ function App() {
   const [topStories, setTopStories] = useState([]);
 
   useEffect(() => {
+    let storedItems = localStorage.getItem('storedItems')
+    storedItems = JSON.parse(storedItems);
+    setTopStories(storedItems);
     async function fetchData() {
       let stories = [];
+
       let topStoriesData = await getTopStories();
       let storedStories = localStorage.getItem('topStories');
       if (storedStories === JSON.stringify(topStoriesData)) {
         console.log("Using local version");
 
-        let storedItems = localStorage.getItem('storedItems')
-        storedItems = JSON.parse(storedItems);
         setTopStories(storedItems);
       } else {
         topStoriesData.forEach(async (story, i) => {
