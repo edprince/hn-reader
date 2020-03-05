@@ -15,8 +15,10 @@ function Story(props) {
                   by {props.story.by} 
                 </p>
                 <span className="mr-2 font-bold text-xs text-green-900 bg-green-200 rounded-full pr-2 pl-2" >
+                  <span className="text-xs mr-1">
+                    ▲
+                  </span>
                   {props.story.score}
-                  <i className="ml-1 fas fa-sort-up"></i>
                 </span>
             </div>
           </div>
