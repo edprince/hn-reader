@@ -12,18 +12,17 @@ function Story(props) {
                 <h3 className="text-lg leading-6 font-medium text-gray-900">
                     {props.story.title}
                 </h3>
-                <p className="mt-1 max-w-2xl text-sm leading-5 text-gray-500">
+                <p className="mt-1 max-w-2xl text-sm leading-5 text-gray-500 pb-2">
                   by {props.story.by} 
                 </p>
-                <span className="font-bold text-xs text-green-900 bg-green-200 rounded-full pr-2 pl-2" >
-                  <span className="text-xs mr-1">
-                    ▲
+                <span className="text-sm text-gray-500 rounded-full pr-2 pl-2" >
+                  <span className="mr-1">
+                    <span className="lnr lnr-thumbs-up mr-2"></span>
                   </span>
                   {props.story.score}
                 </span>
-                <span className="text-gray-500 text-md leading-none font-black ml-2 mr-2">·</span>
-                <span className="text-sm text-gray-500" >
-                  {props.story.descendants} Comments
+                <span className="text-sm text-gray-500 ml-2" >
+                  <span className="lnr lnr-bubble mr-2"></span>{props.story.descendants}
                 </span>
             </div>
           </div>
