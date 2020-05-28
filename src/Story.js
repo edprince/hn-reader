@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from "moment";
 import "./App.css";
 
 function Story(props) {
@@ -14,11 +15,15 @@ function Story(props) {
                 <p className="mt-1 max-w-2xl text-sm leading-5 text-gray-500">
                   by {props.story.by} 
                 </p>
-                <span className="mr-2 font-bold text-xs text-green-900 bg-green-200 rounded-full pr-2 pl-2" >
+                <span className="font-bold text-xs text-green-900 bg-green-200 rounded-full pr-2 pl-2" >
                   <span className="text-xs mr-1">
                     ▲
                   </span>
                   {props.story.score}
+                </span>
+                <span className="text-gray-500 text-md leading-none font-black ml-2 mr-2">·</span>
+                <span className="text-sm text-gray-500" >
+                  {props.story.descendants} Comments
                 </span>
             </div>
           </div>

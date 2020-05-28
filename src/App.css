@@ -5,6 +5,7 @@ body {
 .list-hover {
   border-right: solid 1px white;
   transition: .1s;
+  box-sizing:border-box;
 }
 
 .list-hover:hover {
