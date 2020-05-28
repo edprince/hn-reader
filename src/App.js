@@ -7,10 +7,11 @@ function App() {
   const [topStories, setTopStories] = useState([]);
 
   useEffect(() => {
-    setTopStories([]);
     let storedItems = localStorage.getItem('storedItems')
-    storedItems = JSON.parse(storedItems);
-    setTopStories(storedItems);
+    if (storedItems) {
+      storedItems = JSON.parse(storedItems);
+      setTopStories(storedItems);
+    }
     async function fetchData() {
       let stories = [];
 
@@ -37,7 +38,6 @@ function App() {
 
 
     fetchData();
-
   }, []);
 
 
